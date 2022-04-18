@@ -1,0 +1,21 @@
+.jumbotron
+{
+    background-color: crimson;
+    color: white;
+    height: 600px;
+    text-align: center;
+    padding: 100px;
+}
+
+#JerryJeudy
+{
+    position: relative;
+    max-height: 300px;
+}
+
+.card
+{
+    min-height: 100px;
+    max-width: fit-content;
+    padding: 5px;
+}
