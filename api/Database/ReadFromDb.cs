@@ -27,6 +27,7 @@ namespace PA4.Database
                     SongTitle = rdr.GetString(1),
                     SongTimestamp = rdr.GetDateTime(2),
                     Deleted = rdr.GetString(3),
+                    Favorite = rdr.GetString(4),
                 };
                 songList.Add(tempSong);
             }

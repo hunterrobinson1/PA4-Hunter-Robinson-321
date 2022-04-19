@@ -26,7 +26,7 @@ function populateForm(){
     document.getElementById("songTitle").value = mySongList.songTitle; 
     document.getElementById("songTimestamp").value = mySongList.songTimestamp;
     document.getElementById("Deleted").value = mySongList.Deleted;
-    document.getElementById("Favorite").value = mySongList.Favorite;
+    document.getElementById("Favorite").value = mySongList.favorite;
 }
 
 
@@ -93,7 +93,7 @@ function putSong(){
         songTitle: document.getElementById("songTitle").value,
         songTimestamp: document.getElementById("songTimestamp").value,
         Deleted: document.getElementById("Deleted").value,
-        Favorite: document.getElementById("Favorite").value, 
+        favorite: document.getElementById("Favorite").value, 
     }
     fetch(putSongApiUrl, { 
         method: "PUT",
@@ -129,8 +129,8 @@ function deleteThisSong(){
 
 function favoriteThisSong(){
     var thisFavoriteTitle = document.getElementById("favoriteSong").value
-    const deleteSongApiUrl = baseUrl + "/" + thisFavoriteTitle;
-    fetch(deleteSongApiUrl, {
+    const favoriteSongApiUrl = baseUrl + "/" + thisFavoriteTitle;
+    fetch(favoriteSongApiUrl, {
         method: "PUT",
         headers: {
             "Accept": 'application/json',
@@ -158,13 +158,13 @@ function findSongs(){
         console.log(json)
         let html = ``;
 		json.forEach((song) => {
-            if(song.Favorite == `yes`)
+            if(song.favorite == `yes`)
             {
-                console.log(song.Favorite)
+                console.log(song.favorite)
                 html += `<div class="card col-md-4 bg-dark text-white">`;
                 html += `<img src="./resources/images/music.jpeg" class="card-img" alt="...">`;
                 html += `<div class="card-img-overlay">`;
-                html += `<h5 class="card-title">`+song.songTitle+song.Favorite+`</h5>`;
+                html += `<h5 class="card-title">`+song.songTitle+song.favorite+`</h5>`;
                 html += `</div>`;
                 html += `</div>`;
             }
@@ -174,7 +174,7 @@ function findSongs(){
                 html += `<div class="card col-md-4 bg-dark text-white">`;
                 html += `<img src="./resources/images/music.jpeg" class="card-img" alt="...">`;
                 html += `<div class="card-img-overlay">`;
-                html += `<h5 class="card-title">`+song.songTitle+` `+song.Favorite+`</h5>`;
+                html += `<h5 class="card-title">`+song.songTitle+` `+song.favorite+`</h5>`;
                 html += `</div>`;
                 html += `</div>`;
             }

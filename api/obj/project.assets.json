@@ -7416,11 +7416,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/hunterrobinson/Desktop/PA4-MIS321-HunterRobinson/api/api.csproj",
+      "projectUniqueName": "/Users/hunterrobinson/Desktop/PA4-Hunter-Robinson-321/api/api.csproj",
       "projectName": "api",
-      "projectPath": "/Users/hunterrobinson/Desktop/PA4-MIS321-HunterRobinson/api/api.csproj",
+      "projectPath": "/Users/hunterrobinson/Desktop/PA4-Hunter-Robinson-321/api/api.csproj",
       "packagesPath": "/Users/hunterrobinson/.nuget/packages/",
-      "outputPath": "/Users/hunterrobinson/Desktop/PA4-MIS321-HunterRobinson/api/obj/",
+      "outputPath": "/Users/hunterrobinson/Desktop/PA4-Hunter-Robinson-321/api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/hunterrobinson/.nuget/NuGet/NuGet.Config"
