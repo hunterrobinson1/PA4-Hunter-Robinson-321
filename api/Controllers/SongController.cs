@@ -19,11 +19,10 @@ namespace PA4.Controllers
         [HttpGet]
         public List<Song> Get()
         {
-            System.Console.WriteLine("HEREESSFD");
             return ReadFromDb.ShowAllSongs();
         }
 
-        // GET: api/Song/5
+        
         [EnableCors("AnotherPolicy")]
         [HttpGet("{id}", Name = "Get")]
         public Song Get(int id)
@@ -32,7 +31,7 @@ namespace PA4.Controllers
 
         }
 
-        // POST: api/Song
+        
         [EnableCors("AnotherPolicy")]
         [HttpPost]
         public void Post([FromBody] Song newSong)
@@ -41,7 +40,7 @@ namespace PA4.Controllers
             AddSongDB.AddASongDb(hunterSong);
         }
 
-        // PUT: api/Song/5
+       
         [EnableCors("AnotherPolicy")]
         [HttpPut("{title}")]
         public void Put(string title)
@@ -49,7 +48,7 @@ namespace PA4.Controllers
             EditSongDb.EditSongFromDb(title);
         }
 
-        // DELETE: api/Song/5
+       
         [EnableCors("AnotherPolicy")]
         [HttpDelete("{title}")]
         public void Delete(string title)

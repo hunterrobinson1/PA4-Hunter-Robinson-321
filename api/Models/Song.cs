@@ -12,7 +12,7 @@ namespace PA4.Models
 
         public string Favorite {get; set;}
 
-        public override string ToString() // overriding the ToString for the song class to include all properties of the class
+        public override string ToString() 
         {
             return SongTitle + " (ID: " + SongID + ", Added " + SongTimestamp + ")";
         }
@@ -21,8 +21,8 @@ namespace PA4.Models
             return SongID + "#" + SongTitle + "#" + SongTimestamp + "#" + Deleted + "#" + Favorite ;
         }
 
-        public int CompareTo(Song temp) { // since I am using IComparable, I need a CompareTo for "contract"
-            return -this.SongTimestamp.CompareTo(temp.SongTimestamp); // negative sign allows the timestamps to be sorted in descending order
+        public int CompareTo(Song temp) { 
+            return -this.SongTimestamp.CompareTo(temp.SongTimestamp); 
         }
 
         public Song()

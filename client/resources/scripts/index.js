@@ -3,23 +3,6 @@ var songList = [];
 var mySongList = {}; 
 
 
-// function populateList(){
-//     const allSongsApiUrl = baseUrl;
-//     fetch(allSongsApiUrl).then(function(response){
-//         return response.json();
-//         }).then(function(json){
-//             songList = json;
-//             let html = `<select class="listBox" onLoad="handleOnLoad()" id="selectListBox" onClick="handleOnChange()" name="list_box" size=5 width="100%">"`;            
-//             json.forEach((song)=>{
-//                 html += "<option value= " + song.songId + ">" + "<h3>" + "<strong>Title: </strong>" + song.songTitle + "</h3>" + "</option>";
-//             })
-//             html+="</select>";
-//             document.getElementById("listBox").innerHTML = html;
-//         }) .catch(function(error){
-//             console.log(error);
-//         });
-// }
-
 
 function populateForm(){
     document.getElementById("songId").value = mySongList.songId;
@@ -122,7 +105,6 @@ function deleteThisSong(){
         }
     })
     .then((response)=>{
-        //blankFields();
         findSongs();
     });
 }
@@ -138,7 +120,6 @@ function favoriteThisSong(){
         }
     })
     .then((response)=>{
-        //blankFields();
         findSongs();
     });
 }
