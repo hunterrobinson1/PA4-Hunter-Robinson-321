@@ -164,7 +164,7 @@ function findSongs(){
                 html += `<div class="card col-md-4 bg-dark text-white">`;
                 html += `<img src="./resources/images/music.jpeg" class="card-img" alt="...">`;
                 html += `<div class="card-img-overlay">`;
-                html += `<h5 class="card-title">`+song.songTitle+song.favorite+`</h5>`;
+                html += `<h5 class="card-title">`+song.songTitle+ '🌟' +`</h5>`;
                 html += `</div>`;
                 html += `</div>`;
             }
@@ -174,7 +174,7 @@ function findSongs(){
                 html += `<div class="card col-md-4 bg-dark text-white">`;
                 html += `<img src="./resources/images/music.jpeg" class="card-img" alt="...">`;
                 html += `<div class="card-img-overlay">`;
-                html += `<h5 class="card-title">`+song.songTitle+` `+song.favorite+`</h5>`;
+                html += `<h5 class="card-title">`+song.songTitle+`</h5>`;
                 html += `</div>`;
                 html += `</div>`;
             }
